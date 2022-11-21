@@ -1,0 +1,630 @@
+/*-- MADE BY @ENRYX72 --*/
+
+/*Header ---------------------------------------------------------------------------------------------------*/
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 200%;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    transition: 0.2s;
+    /*background-color: rgba(240, 248, 255, 0.918);*/
+    background-image: linear-gradient(to right bottom, #d3ff00, #ebdb00, #e7c400, #ebac00, #fc8f01);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a{
+    display: block;
+    color: #000000;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.dropdown-content a:hover{
+    color: white;
+    background-color: rgba(0, 255, 221, 0.473);
+}
+
+.header{
+    display: flex;
+    background-color: #292929;
+    position: fixed;
+    width: 100%;
+}
+
+.header-dropdown-bttn:hover{
+    background-color: #B7A4A5;
+}
+
+.header-spacer{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.header-item:hover{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(43, 255, 0);
+}
+
+.header-item-contact:hover{     /*CONTACT ME*/
+    text-shadow: rgb(20, 144, 120) 1px 1px,
+    rgb(20, 144, 120) 2px 2px,
+    rgb(20, 144, 120) 3px 3px,
+    rgb(20, 144, 120) 4px 4px,
+    rgb(20, 144, 120) 5px 5px,
+    rgb(20, 144, 120, 0) 6px 6px,
+    rgb(20, 144, 120, 0) 7px 7px,
+    rgb(20, 144, 120, 0) 8px 8px,
+    rgb(20, 144, 120, 0) 9px 9px,
+    rgb(20, 144, 120, 0) 10px 10px,
+    rgb(20, 144, 120, 0) 11px 11px,
+    rgb(20, 144, 120, 0) 12px 12px,
+    rgb(20, 145, 121, 0) 13px 13px,
+    rgb(20, 146, 122, 0) 14px 14px,
+    rgb(20, 147, 123, 0) 15px 15px,
+    rgb(20, 148, 123, 0) 16px 16px,
+    rgb(20, 149, 124, 0) 17px 17px,
+    rgb(20, 150, 125, 0) 18px 18px,
+    rgb(20, 151, 126, 0) 19px 19px,
+    rgb(21, 152, 126, 0) 20px 20px,
+    rgb(21, 153, 127, 0) 21px 21px,
+    rgb(21, 154, 128, 0) 22px 22px,
+    rgb(21, 155, 129, 0) 23px 23px,
+    rgb(21, 156, 129, 0) 24px 24px,
+    rgb(21, 157, 130, 0) 25px 25px,
+    rgb(21, 158, 131, 0) 26px 26px,
+    rgb(21, 159, 132, 0) 27px 27px,
+    rgb(22, 160, 132, 0) 28px 28px;
+    height: 0px;
+    width: 81.81px;
+}
+
+.header-item-games:hover:not(.games-dropdown-text){     /*GAMES*/
+    text-shadow: rgb(20, 144, 120) 1px 1px,
+    rgb(20, 144, 120) 2px 2px,
+    rgb(20, 144, 120) 3px 3px,
+    rgb(20, 144, 120) 4px 4px,
+    rgb(20, 144, 120) 5px 5px,
+    rgb(20, 144, 120, 0) 6px 6px,
+    rgb(20, 144, 120, 0) 7px 7px,
+    rgb(20, 144, 120, 0) 8px 8px,
+    rgb(20, 144, 120, 0) 9px 9px,
+    rgb(20, 144, 120, 0) 10px 10px,
+    rgb(20, 144, 120, 0) 11px 11px,
+    rgb(20, 144, 120, 0) 12px 12px,
+    rgb(20, 145, 121, 0) 13px 13px,
+    rgb(20, 146, 122, 0) 14px 14px,
+    rgb(20, 147, 123, 0) 15px 15px,
+    rgb(20, 148, 123, 0) 16px 16px,
+    rgb(20, 149, 124, 0) 17px 17px,
+    rgb(20, 150, 125, 0) 18px 18px,
+    rgb(20, 151, 126, 0) 19px 19px,
+    rgb(21, 152, 126, 0) 20px 20px,
+    rgb(21, 153, 127, 0) 21px 21px,
+    rgb(21, 154, 128, 0) 22px 22px,
+    rgb(21, 155, 129, 0) 23px 23px,
+    rgb(21, 156, 129, 0) 24px 24px,
+    rgb(21, 157, 130, 0) 25px 25px,
+    rgb(21, 158, 131, 0) 26px 26px,
+    rgb(21, 159, 132, 0) 27px 27px,
+    rgb(22, 160, 132, 0) 28px 28px;
+    height: 18px;
+    width: 51.58px;
+}
+
+.header-item-home:hover{        /*HOME*/
+    text-shadow: rgb(20, 144, 120) 1px 1px,
+    rgb(20, 144, 120) 2px 2px,
+    rgb(20, 144, 120) 3px 3px,
+    rgb(20, 144, 120) 4px 4px,
+    rgb(20, 144, 120) 5px 5px,
+    rgb(20, 144, 120, 0) 6px 6px,
+    rgb(20, 144, 120, 0) 7px 7px,
+    rgb(20, 144, 120, 0) 8px 8px,
+    rgb(20, 144, 120, 0) 9px 9px,
+    rgb(20, 144, 120, 0) 10px 10px,
+    rgb(20, 144, 120, 0) 11px 11px,
+    rgb(20, 144, 120, 0) 12px 12px,
+    rgb(20, 145, 121, 0) 13px 13px,
+    rgb(20, 146, 122, 0) 14px 14px,
+    rgb(20, 147, 123, 0) 15px 15px,
+    rgb(20, 148, 123, 0) 16px 16px,
+    rgb(20, 149, 124, 0) 17px 17px,
+    rgb(20, 150, 125, 0) 18px 18px,
+    rgb(20, 151, 126, 0) 19px 19px,
+    rgb(21, 152, 126, 0) 20px 20px,
+    rgb(21, 153, 127, 0) 21px 21px,
+    rgb(21, 154, 128, 0) 22px 22px,
+    rgb(21, 155, 129, 0) 23px 23px,
+    rgb(21, 156, 129, 0) 24px 24px,
+    rgb(21, 157, 130, 0) 25px 25px,
+    rgb(21, 158, 131, 0) 26px 26px,
+    rgb(21, 159, 132, 0) 27px 27px,
+    rgb(22, 160, 132, 0) 28px 28px;
+    height: 0px;
+    width: 42.69px;
+}
+
+.header-item-about:hover{       /*ABOUT ME*/
+    text-shadow: rgb(20, 144, 120) 1px 1px,
+    rgb(20, 144, 120) 2px 2px,
+    rgb(20, 144, 120) 3px 3px,
+    rgb(20, 144, 120) 4px 4px,
+    rgb(20, 144, 120) 5px 5px,
+    rgb(20, 144, 120, 0) 6px 6px,
+    rgb(20, 144, 120, 0) 7px 7px,
+    rgb(20, 144, 120, 0) 8px 8px,
+    rgb(20, 144, 120, 0) 9px 9px,
+    rgb(20, 144, 120, 0) 10px 10px,
+    rgb(20, 144, 120, 0) 11px 11px,
+    rgb(20, 144, 120, 0) 12px 12px,
+    rgb(20, 145, 121, 0) 13px 13px,
+    rgb(20, 146, 122, 0) 14px 14px,
+    rgb(20, 147, 123, 0) 15px 15px,
+    rgb(20, 148, 123, 0) 16px 16px,
+    rgb(20, 149, 124, 0) 17px 17px,
+    rgb(20, 150, 125, 0) 18px 18px,
+    rgb(20, 151, 126, 0) 19px 19px,
+    rgb(21, 152, 126, 0) 20px 20px,
+    rgb(21, 153, 127, 0) 21px 21px,
+    rgb(21, 154, 128, 0) 22px 22px,
+    rgb(21, 155, 129, 0) 23px 23px,
+    rgb(21, 156, 129, 0) 24px 24px,
+    rgb(21, 157, 130, 0) 25px 25px,
+    rgb(21, 158, 131, 0) 26px 26px,
+    rgb(21, 159, 132, 0) 27px 27px,
+    rgb(22, 160, 132, 0) 28px 28px;
+    height: 0px;
+    width: 68.48px;
+}
+
+.header-item-socials:hover{     /*SOCIALS*/
+    text-shadow: rgb(20, 144, 120) 1px 1px,
+    rgb(20, 144, 120) 2px 2px,
+    rgb(20, 144, 120) 3px 3px,
+    rgb(20, 144, 120) 4px 4px,
+    rgb(20, 144, 120) 5px 5px,
+    rgb(20, 144, 120, 0) 6px 6px,
+    rgb(20, 144, 120, 0) 7px 7px,
+    rgb(20, 144, 120, 0) 8px 8px,
+    rgb(20, 144, 120, 0) 9px 9px,
+    rgb(20, 144, 120, 0) 10px 10px,
+    rgb(20, 144, 120, 0) 11px 11px,
+    rgb(20, 144, 120, 0) 12px 12px,
+    rgb(20, 145, 121, 0) 13px 13px,
+    rgb(20, 146, 122, 0) 14px 14px,
+    rgb(20, 147, 123, 0) 15px 15px,
+    rgb(20, 148, 123, 0) 16px 16px,
+    rgb(20, 149, 124, 0) 17px 17px,
+    rgb(20, 150, 125, 0) 18px 18px,
+    rgb(20, 151, 126, 0) 19px 19px,
+    rgb(21, 152, 126, 0) 20px 20px,
+    rgb(21, 153, 127, 0) 21px 21px,
+    rgb(21, 154, 128, 0) 22px 22px,
+    rgb(21, 155, 129, 0) 23px 23px,
+    rgb(21, 156, 129, 0) 24px 24px,
+    rgb(21, 157, 130, 0) 25px 25px,
+    rgb(21, 158, 131, 0) 26px 26px,
+    rgb(21, 159, 132, 0) 27px 27px,
+    rgb(22, 160, 132, 0) 28px 28px;
+    height: 18px;
+    width: 51.58px;
+}
+
+/*Footer-----------------------------------------------------------------------------------------------------*/
+
+.footer{
+    background-color: #292929;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin-top: auto;
+    color: white
+}
+
+/*Fonts e text ----------------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+@font-face{
+    font-family: 'Montserrat-bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXo.woff2) format('woff2');
+    /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;*/
+}
+
+.header-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-decoration: none;
+    color: white;
+}
+
+.header-text-dropdown{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
+.header-item{
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+/*General doc -----------------------------------------------------------------------------------------------*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*Index------------------------------------------------------------------------------------------------------*/
+
+.index-main-img{
+    width: 100%;
+    height: 1080px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.index-main-text{
+    position: absolute;
+    bottom: 85px;
+    left: 16px;
+    font-family: "Montserrat";
+    text-shadow: rgb(102, 255, 0) 1px 0 5px;
+}
+
+.index-main-text-big{
+    position: absolute;
+    bottom: 85px;
+    left: 35.18518519%;
+    font-family: "Montserrat";
+    font-weight: 900;
+}
+
+.index-main-corner-img{
+    position: absolute;
+    bottom: -149px;
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden;
+}
+
+
+body:not(.mobile) .index-main-text:hover + .index-main-corner-img{
+    visibility: visible;
+    pointer-events: none;
+}
+
+/*About-------------------------------------------------------------------------------------------------------*/
+
+.about-main-img{
+    width: 100%;
+    height: 950px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.about-main-text{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat";
+    text-align: center;
+    width: 70%;
+}
+
+/*YouTube------------------------------------------------------------------------------------------------------*/
+
+.yt-button{
+    align-items: center;
+    background-color: #282828;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.267s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+  
+.yt-button:hover, .yt-button:focus{ 
+    background-color: #FF0000;
+    color: #ffffff;
+}
+  
+.yt-button:active{
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+  
+.yt-button:disabled{ 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+  
+.yt-main-button{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*Twitch----------------------------------------------------------------------------------------------------*/
+
+.ttv-button{
+    align-items: center;
+    background-color: #282828;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.267s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+  
+.ttv-button:hover, .ttv-button:focus{ 
+    background-color: #6441a5;
+    color: #ffffff;
+}
+  
+.ttv-button:active{
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+  
+.ttv-button:disabled{ 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+  
+.ttv-main-button{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.twitch-bottom-right {
+    position: absolute;
+    bottom: -10px;
+    right: 16px;
+    font-family: "Montserrat";
+}
+
+/*Kirka.io------------------------------------------------------------------------------------------------------*/
+
+.kk-button{
+    align-items: center;
+    background-color: #777777;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.267s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+  
+.kk-button:hover, .kk-button:focus{ 
+    background-color: #9A4F15;
+    color: #ffffff;
+}
+  
+.kk-button:active{
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+  
+.kk-button:disabled{ 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+  
+.kk-main-button{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.kk-main-text{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat";
+    text-align: center;
+    width: 70%;
+    text-shadow: 0px 0px 16px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+/*Cubeshot.io------------------------------------------------------------------------------------------------*/
+
+.cb-button{
+    align-items: center;
+    background-color: #777777;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.267s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+  
+.cb-button:hover, .cb-button:focus{ 
+    background-color: #FEE660;
+    color: #3f3f3f;
+}
+  
+.cb-button:active{
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+  
+.cb-button:disabled{ 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+  
+.cb-main-button{
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cb-main-text{
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat";
+    text-align: center;
+    width: 70%;
+    text-shadow: 0px 0px 16px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+/*Contact Me-------------------------------------------------------------------------------------------------*/
+
+.cm-main-text{
+    position: absolute;
+    top: 14%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat";
+    text-align: center;
+    width: 70%;
+    text-shadow: 0px 0px 16px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.cm-mail-text{
+    position: absolute;
+    top: 74%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat";
+    text-align: center;
+    width: 70%;
+    text-shadow: 0px 0px 16px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.cm-ds-text{
+    position: absolute;
+    top: 28%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat";
+    text-align: center;
+    width: 70%;
+    text-shadow: 0px 0px 16px rgba(0, 0, 0, 1);
+    color: white;
+}
